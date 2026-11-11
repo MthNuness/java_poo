@@ -15,9 +15,9 @@ public class Caneta02{
 
     void rabiscar (){
         if (tampado == true){
-            System.out.print("Tire a tampa");
+            System.out.println("Tire a tampa");
         }else{
-            System.out.print("Pronta para escrever");
+            System.out.println("Pronta para escrever");
         }
     }
 
