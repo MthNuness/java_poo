@@ -1,7 +1,8 @@
 public class Depositar_sacar01{
 
-    private double saldo;
+    private double saldo = 1000 + (int)(Math.random() * 5000);
     public int menu;
+    public int deposito;
 
     void menu(){
         System.out.println("=================================");
@@ -12,11 +13,21 @@ public class Depositar_sacar01{
         System.out.print("Digite qual opção deseja");
     }
 
+    void saldo(){
+        System.out.println("Saldo atual: " + saldo);
+    }
+
     void depositar(){
+        if(deposito < 0){
+            System.out.print("Não aceitamos números negativos");
+        } else{
+            saldo += deposito;
+            System.out.print("Saldo atual: " + saldo);
+        }
 
     }
 
     void sacar(){
-        
+
     }
 }
