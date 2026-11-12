@@ -7,26 +7,27 @@ public class Depositar_sacar{
 
         //Criando o Menu
         d1.menu();
-        d1.menu = sc.nextInt();
-        System.out.println("");
-        System.out.println("=================================");
-        System.out.println("");
+        d1.menuA = sc.nextInt();
+        d1.separar();
 
 
         //Deposito / Sacar
-       switch(d1.menu){
+       switch(d1.menuA){
             case 1:
                 d1.saldo();
                 System.out.print("Quanto deseja depositar: ");
-                d1.deposito = sc.nextInt();
+                d1.depositoA = sc.nextInt();
                 d1.depositar();
 
                 break;
             case 2:
                 d1.saldo();
+                System.out.print("Quanto deseja sacar: ");
+                d1.sacarA = sc.nextInt();
                 d1.sacar();
+
                 break;
        }
-       s
+       sc.close();
     }
 }
