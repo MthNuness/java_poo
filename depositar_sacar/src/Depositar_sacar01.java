@@ -3,6 +3,7 @@ public class Depositar_sacar01{
     private double saldo = 1000 + (int)(Math.random() * 5000);
     public int menu;
     public int deposito;
+    public int sacar;
 
     void menu(){
         System.out.println("=================================");
@@ -24,10 +25,14 @@ public class Depositar_sacar01{
             saldo += deposito;
             System.out.print("Saldo atual: " + saldo);
         }
-
     }
 
     void sacar(){
-
+        if(sacar >= saldo){
+            System.out.print("O saque supera o valor do seu saldo");
+        }else{
+            saldo -= sacar;
+            System.out.print("Saldo atual: " + saldo);
+        }
     }
 }
