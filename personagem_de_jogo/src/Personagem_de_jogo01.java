@@ -59,15 +59,28 @@ public class Personagem_de_jogo01{
     }
 
     public void setvida(int vida){
+        if (vida < 0) {
+            this.vida = 0;      
+        } else {
         this.vida = vida;
+        }
     }
 
+
     public void setvida1(int vida1){
-        this.vida = vida1;
+        if (vida1 < 0) {
+            this.vida1 = 0;      
+        } else {
+        this.vida1 = vida1;
+        }
     }
 
     public void setvida2(int vida2){
-        this.vida = vida2;
+        if (vida2 < 0) {
+            this.vida2 = 0;      
+        } else {
+        this.vida2 = vida2;
+        }
     }
 
     public void setdano(int dano){
@@ -191,7 +204,7 @@ public class Personagem_de_jogo01{
             switch(luta){
                 case 1:
                     this.vida1 -= this.dano;
-                    this.vida -= 10;
+                    this.setvida(this.getvida() - 10);
                     vida1();
                     status();
                     break;
@@ -205,10 +218,10 @@ public class Personagem_de_jogo01{
             System.out.println("Parabens você derrotou o inimigo!");
             System.out.println("Porém quando você menos espera.");
             System.out.println("Outro inimigo pula em você e não te deixa escapatoria, lute pela sua vida");
+            inimigo2(sc);
         }else{
             System.out.println("DERROTA");
         }
-        inimigo2(sc);
     }
 
     public void inimigo2(Scanner sc){
@@ -229,7 +242,7 @@ public class Personagem_de_jogo01{
             switch(luta){
                 case 1:
                     this.vida2 -= this.dano;
-                    this.vida -= 10;
+                    this.setvida(this.getvida() - 10);
                     vida2();
                     status();
                     break;
