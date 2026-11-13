@@ -22,5 +22,8 @@ public class Personagem_de_jogo{
 
         //Dungeons 
         p1.dungeon(sc);
+
+        //Combate
+        p1.inimigoint(sc);
     }
 }
