@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Banco01 {
     
     //Atributos
@@ -43,10 +45,12 @@ public class Banco01 {
     }
 
     public void settipo(String tipo){
-        if (tipo.equals("CC")){
+        if (tipo.trim().equals("CC")){
             this.setsaldo(this.getsaldo() + 50);
+            this.tipo = tipo;
         }else{
             this.setsaldo(this.getsaldo() + 150);
+            this.tipo = tipo;
         }
     }
 
@@ -68,7 +72,7 @@ public class Banco01 {
         this.setsaldo(0);
     }
 
-    public void menu(){
+    public void menu(Scanner sc){
         System.out.println("=======================");
         System.out.println("        M E N U        ");
         System.out.println("=======================");
@@ -78,11 +82,74 @@ public class Banco01 {
         System.out.println("[ 3 ] Depositar");
         System.out.println("[ 4 ] Sacar");
         System.out.println("");
-        System.out.println("Digite qual deseja: ");
+        System.out.print("Digite qual deseja: ");
+        int escolha = sc.nextInt();
+        switch(escolha){
+            case 1: 
+                criar_conta(sc);
+
+                break;
+            case 2:
+                deletar_conta();
+
+                break;
+            case 3:
+                depositar();
+
+                break;
+            case 4:
+                sacar();
+
+                break;
+        }
     }
 
-    public void criar_conta(){
+    public void criar_conta(Scanner sc){
+        //Nome
+        System.out.println("");
+        System.out.println("");
+        System.out.println("=======================");
+        System.out.println("     CRIANDO CONTA     ");
+        System.out.println("");
+        System.out.print("Informe o nome da sua conta: ");
+        String N1 = sc.nextLine();
+        String nomeC = sc.nextLine();
+        this.setdono(nomeC);
+
+        //Tipo de conta
+        System.out.println("");
+        System.out.println("");
+        System.out.println("=======================");
+        System.out.println("     TIPO DA CONTA     ");
+        System.out.println("[ CC ] Caso deseje uma conta corrente");
+        System.out.println("[ CP ] Caso deseje uma conta poupança");
+        System.out.println("");
+        System.out.print("Qual deseja: ");
+        String tipo1 = sc.nextLine();
+        this.settipo(tipo1);
+
+        //Criou
+        System.out.println("");
+        System.out.println("=======================");
+        System.out.println("         STATUS        ");
+        System.out.println("");
+        System.out.println("Nome: " + getdono());
+        System.out.println("Número : #" + getnumconta());
+        System.out.println("Tipo: " + gettipo());
+        System.out.println("Saldo: " + getsaldo());
         this.setstatus(true);
+        System.out.println("Status: " + getstatus());
+    }
+
+    public void deletar_conta(){
+
+    }
+
+    public void depositar(){
+
+    }
+
+    public void sacar(){
 
     }
 
