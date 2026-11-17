@@ -86,12 +86,18 @@ public class Banco01 {
         int escolha = sc.nextInt();
         switch(escolha){
             case 1: 
-                criar_conta(sc);
-
+                if (this.getstatus() == false){
+                    criar_conta(sc);
+                } else{
+                    System.out.println("Você já possue uma conta");
+                }
                 break;
             case 2:
-                deletar_conta();
-
+                if (this.getstatus() == true){
+                    deletar_conta(sc);
+                }else{
+                    System.out.println("Você não possue uma conta");
+                }
                 break;
             case 3:
                 depositar();
@@ -141,8 +147,37 @@ public class Banco01 {
         System.out.println("Status: " + getstatus());
     }
 
-    public void deletar_conta(){
-
+    public void deletar_conta(Scanner sc){
+        System.out.println("");
+        System.out.println("");
+        System.out.println("=======================");
+        System.out.println("     DELETAR CONTA     ");
+        System.out.println("");
+        System.out.println("[ 1 ] Caso deseje deletar");
+        System.out.println("[ 2 ] Caso deseje manter a conta");
+        System.out.println("");
+        System.out.print("Qual deseja: ");
+        int deletar = sc.nextInt();
+        System.out.println("");
+        System.out.println("=======================");
+        System.out.println("     DELETAR CONTA     ");
+        switch (deletar){
+            case 1:
+                if (this.getsaldo() > 0){
+                    System.out.println("INVÁLIDO!");
+                    System.out.println("Saque todo o seu saldo antes de deletar sua conta");
+                }else if (this.getsaldo() < 0){
+                    System.out.println("INVÁLIDO!");
+                    System.out.println("Pague sua divida antes de deletar sua conta");
+                }else{
+                    System.out.println("Conta deletada");
+                    this.setstatus(false);
+                }
+                break;
+            case 2:
+                System.out.println("Voltando ao menu...");
+                break;
+        }
     }
 
     public void depositar(){
