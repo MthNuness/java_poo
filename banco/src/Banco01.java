@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
-public class Banco01 {
+public class Banco01 implements Banco00 {
     
     //Atributos
-    public int numconta = 10000 + (int)(Math.random() * 40001);
-    protected String tipo;
+    private int numconta = 10000 + (int)(Math.random() * 40001);
+    private String tipo;
     private String dono;
     private int saldo;
     private boolean status;
@@ -81,6 +81,7 @@ public class Banco01 {
         this.setsaldo(0);
     }
 
+    @Override 
     public void menu(Scanner sc){
         System.out.println("=======================");
         System.out.println("        M E N U        ");
@@ -132,6 +133,7 @@ public class Banco01 {
         }
     }
 
+    @Override 
     public void criar_conta(Scanner sc){
         //Nome
         System.out.println("");
@@ -161,6 +163,7 @@ public class Banco01 {
         status();
     }
 
+    @Override 
     public void deletar_conta(Scanner sc){
         System.out.println("");
         System.out.println("");
@@ -196,6 +199,7 @@ public class Banco01 {
         }
     }
 
+    @Override 
     public void depositar(Scanner sc){
         System.out.println("");
         System.out.println("");
@@ -208,6 +212,7 @@ public class Banco01 {
         status();
     }
 
+    @Override 
     public void sacar(Scanner sc){
         System.out.println("");
         System.out.println("");
@@ -231,6 +236,7 @@ public class Banco01 {
         }
     }
 
+    @Override 
     public void status(){
         System.out.println("");
         System.out.println("=======================");
