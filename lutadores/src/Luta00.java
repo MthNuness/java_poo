@@ -13,24 +13,7 @@ public class Luta00{
 
 
         l[0].apresentar();
-        l[0].status();
-
-        l[1].apresentar();
-        l[1].status();
-
-        l[2].apresentar();
-        l[2].status();
-
-        l[3].apresentar();
-        l[3].status();
-
-        l[4].apresentar();
-        l[4].status();
-
-        l[5].apresentar();
-        l[5].status();
-        
-        l[6].apresentar();
-        l[6].status();
+        l[0].ganharLuta();
+        l[0].apresentar();
     }
 }
