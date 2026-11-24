@@ -1,4 +1,5 @@
-public class Luta02 {
+public class Luta02 implements Luta01 {
+
 
     //Atributos
     private String nome;
@@ -109,18 +110,22 @@ public class Luta02 {
     }
 
     //Métodos
+    @Override
     public void ganharLuta(){
         this.setVitorias(this.getVitorias() + 1);
     }
     
+    @Override
     public void perderLuta(){
         this.setDerrotas(this.getDerrotas() + 1);
     }
 
+    @Override
     public void empatarLuta(){
         this.setEmpates(this.getEmpates() + 1);
     }
 
+    @Override
     public void apresentar(){
         System.out.println("================================");
         System.out.println("            LUTADORES           ");
@@ -135,6 +140,7 @@ public class Luta02 {
         System.out.println("Empates: " + this.getEmpates());
     }
 
+    @Override
     public void status(){
         System.out.println(getNome());
         System.out.println("É um peso " + this.getCategoria());
@@ -143,3 +149,4 @@ public class Luta02 {
         System.out.println(this.getEmpates() + "Empates");
     }
 }
+

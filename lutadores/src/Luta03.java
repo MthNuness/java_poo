@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Luta03 {
+public class Luta03 implements Luta04 {
     
     //Atributos
     private Luta02 desafiado;
@@ -44,6 +44,7 @@ public class Luta03 {
     }
 
     //Método
+    @Override 
     public void marcarLuta(Luta02 l1 , Luta02 l2){
         if (l1.getCategoria().equals(l2.getCategoria()) && l1 != l2){
             setAprovado(true);
@@ -56,6 +57,7 @@ public class Luta03 {
         }
     }
     
+    @Override
     public void lutar(){
         if(getAprovado() == true){
             System.out.println("### DESAFIADO ###");
@@ -98,7 +100,6 @@ public class Luta03 {
 
                     break;
             }
-
         }else{
             System.out.println("A luta não pode acontecer");
         }
