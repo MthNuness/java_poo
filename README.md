@@ -7,6 +7,7 @@ Repositório onde guardo os projetos que faço durante meu aprendizado de Java. 
 - **depositar_sacar**: Utilizo métodos, objetos e atributos para desenvolver um sistema bancário que permite ao usuário realizar depósitos e saques conforme sua necessidade. Aplico conceitos de encapsulamento, trabalhando com atributos privados e públicos. Organizo o código em quatro métodos distintos, tornando-o mais limpo, estruturado e de fácil manutenção.
 - **personagem_de_jogo**: Utilizo os métodos Getters e Setters, juntamente com os modificadores de acesso private e public, para organizar e estruturar um jogo de combate em uma dungeon, aplicando conceitos de organização de classes.
 - **banco**: Utilizo os métodos Getters e Setters, juntamente com os modificadores de acesso private e public, para organizar e estruturar de um banco, aplicando conceitos de encapsulamento (Primeiro contato) e organização de classes.
+- **lutadores** - Primeiro contato com o relacionamento entre classes. Utilizo métodos Getters e Setters para desenvolver um sistema de cadastro e combate entre oponentes, com resultados aleatórios de vitórias, derrotas e empates, utilizando a biblioteca random. Também aplico o conceito de encapsulamento para melhorar a organização do código e facilitar sua utilização pelo usuário.
 
 ## Como rodar
 
