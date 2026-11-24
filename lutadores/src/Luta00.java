@@ -11,9 +11,12 @@ public class Luta00{
         l[4] = new Luta02("UFOCobol", "Brasil", 37, 1.70, 119.3, 5, 4, 3);
         l[5] = new Luta02("Nerdaart", "EUA", 30, 1.81, 105.7, 12, 2, 4);
 
+        Luta03 luta = new Luta03();
 
-        l[0].apresentar();
-        l[0].ganharLuta();
-        l[0].apresentar();
+        luta.marcarLuta(l[0], l[1]);
+        luta.lutar();
+
+        luta.marcarLuta(l[0], l[5]);
+        luta.lutar();
     }
 }
