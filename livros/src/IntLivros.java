@@ -2,7 +2,7 @@ public interface IntLivros{
 
     void abrir();
     void fechar();
-    void folhear();
-    void avançarPag();
+    void folhear(int pagina);
+    void avancarPag();
     void voltarPag();
 }

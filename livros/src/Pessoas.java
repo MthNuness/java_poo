@@ -32,8 +32,14 @@ public class Pessoas {
     }
 
     //Métodos
+    public Pessoas(String nome, int idade, String sexo){
+        this.nome = nome;
+        this.idade = idade;
+        this.sexo = sexo;
+    }
+
     public void fazerAniversario(){
-        
+        setIdade(getIdade() + 1);
     }
         
 }

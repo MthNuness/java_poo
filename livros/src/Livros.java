@@ -60,32 +60,44 @@ public class Livros implements IntLivros {
     }
 
     //Métodos
+    public Livros(String titulo, String autor, int totPaginas, Pessoas leitor){
+        this.titulo = titulo;
+        this.autor = autor;
+        this.totPaginas = totPaginas;
+        this.leitor = leitor;
+    }
+
     public void detalhes(){
-        
+        getTitulo();
+        getAutor();
+        getTotPaginas();
+        getPagAtual();
+        getAberto();
+        getLeitor();
     }
 
     @Override
     public void abrir(){
-
+        setAberto(true);
     }
 
     @Override 
     public void fechar(){
-
+        setAberto(false);
     }
 
     @Override 
-    public void folhear(){
-
+    public void folhear(int pagina){
+        this.pagAtual = pagina;
     }
 
     @Override 
-    public void avançarPag(){
-
+    public void avancarPag(){
+        setPagAtual(getPagAtual() + 1);
     }
 
     @Override 
     public void voltarPag(){
-        
+        this.pagAtual--;
     }
 }
