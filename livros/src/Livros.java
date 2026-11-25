@@ -65,15 +65,24 @@ public class Livros implements IntLivros {
         this.autor = autor;
         this.totPaginas = totPaginas;
         this.leitor = leitor;
+        setAberto(false);
+        setPagAtual(0);
     }
 
     public void detalhes(){
-        getTitulo();
-        getAutor();
-        getTotPaginas();
-        getPagAtual();
-        getAberto();
-        getLeitor();
+        System.out.println("");
+        System.out.println("=======================================================");
+        System.out.println("                     LIVRO ATUAL                       ");
+        System.out.println("=======================================================");
+        System.out.println("");
+        System.out.println(this.leitor.getNome() + " está lendo o seguinte livro " + getTitulo());
+        System.out.println("");
+        System.out.println("Escrito pelo autor: " + getAutor() + " com um total de páginas igual a " + getTotPaginas() + " páginas");
+        System.out.println("");
+        System.out.println("Atualmente ele está na página: " + getPagAtual());
+        System.out.println("");
+        System.out.println("Ele está lendo agora?: " + getAberto());
+        
     }
 
     @Override
@@ -88,16 +97,31 @@ public class Livros implements IntLivros {
 
     @Override 
     public void folhear(int pagina){
-        this.pagAtual = pagina;
+        if(pagina <= this.totPaginas){
+            this.pagAtual = pagina;
+        }else if(pagina < 0){
+            System.out.println("Não é possível ir até essa página, pois ela não existe");
+        }else{
+            System.out.println("Não é possível ir até essa página, pois ela não existe");
+        }
     }
 
     @Override 
     public void avancarPag(){
-        setPagAtual(getPagAtual() + 1);
+        if(this.pagAtual <= this.totPaginas){
+            setPagAtual(getPagAtual() + 1);
+        }else{
+            System.out.println("Você terminou o livro. Parabens!!!");
+            setAberto(false);
+        }
     }
 
     @Override 
     public void voltarPag(){
-        this.pagAtual--;
+        if(getPagAtual() <= 0){
+            System.out.println("Essa já é a primeira páginas");
+        }else{
+            this.pagAtual--;
+        }
     }
 }
