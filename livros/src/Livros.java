@@ -1,4 +1,4 @@
-public class Livros {
+public class Livros implements IntLivros {
     
     //Atributos
     private String titulo;
@@ -61,6 +61,31 @@ public class Livros {
 
     //Métodos
     public void detalhes(){
+        
+    }
+
+    @Override
+    public void abrir(){
+
+    }
+
+    @Override 
+    public void fechar(){
+
+    }
+
+    @Override 
+    public void folhear(){
+
+    }
+
+    @Override 
+    public void avançarPag(){
+
+    }
+
+    @Override 
+    public void voltarPag(){
         
     }
 }
