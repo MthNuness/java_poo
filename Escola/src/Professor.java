@@ -1,4 +1,4 @@
-public class Professor {
+public class Professor extends Pessoas{
 
     //Atributos
     private String especialidade;
@@ -27,6 +27,6 @@ public class Professor {
     public void receberAumento(){
         this.salario *= 1.1;
     }
-    
+
     
 }

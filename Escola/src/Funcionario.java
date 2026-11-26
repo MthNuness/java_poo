@@ -1,6 +1,4 @@
-
-
-public class Funcionario {
+public class Funcionario extends Pessoas{
 
     //Atributo
     private String setor;

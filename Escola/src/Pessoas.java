@@ -4,6 +4,7 @@ public class Pessoas {
     private String nome;
     private int idade;
     private String sexo;
+    prote
 
     //Getters
     public String getNome(){
@@ -35,5 +36,4 @@ public class Pessoas {
     public void fazerAniversario(){
         this.idade++;
     }
-
 }

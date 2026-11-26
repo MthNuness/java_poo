@@ -1,4 +1,4 @@
-public class Aluno {
+public class Aluno extends Pessoas{
 
     //Atributos
     private boolean matricula;
